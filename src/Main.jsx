@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './Main.css';
 
 const terms = [
@@ -36,13 +36,26 @@ const terms = [
   }
 ]
 
-function Main(props) {
+function Main() {
+  const titleRef = useRef(null);
+  const [titleHeight, setTitleHeight] = useState(0);
+
+  useEffect(() => {
+    const { height } = titleRef.current.getBoundingClientRect();
+    setTitleHeight(height);
+  }, [])
+
   return (
     <div className="main">
-      <span className="main__title">
+      <span className="main__title" ref={titleRef}>
         top terms
       </span>
-      <div className="main__scroll-table">
+      <div 
+        className="main__scroll-table"
+        style={{
+          maxHeight: `calc(100% - ${titleHeight}px)`
+        }}
+      >
         <table className="table">
           <thead>
             <tr className="header">

@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import './Menu.css';
 
 function Menu(props) {
-  const { platformList, selectedPlatform, onSelectPlatform } = props
-  const [isHideMenu, setIsHideIcons] = useState(false);
-
-  function handleClickButton() {
-    setIsHideIcons(true);
-  }
+  const { platformList, selectedPlatform, onSelectPlatform, onClickButton } = props
 
   return (
-    <div className={`menu ${isHideMenu && "hidden"}`}>
+    <div className="menu">
       {
         <div className="menu__items">
           {
@@ -33,7 +28,7 @@ function Menu(props) {
       }
       <div
         className="menu__button"
-        onClick={handleClickButton}
+        onClick={onClickButton}
       >
         Hide
       </div>

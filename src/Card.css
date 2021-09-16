@@ -1,6 +1,8 @@
 .card {
   width: 400px;
   height: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__header {
@@ -27,8 +29,8 @@
 }
 
 .card__content {
-  min-height: 60%;
-  max-height: 70%;
+  flex-shrink: 1;
+  height: 70%;
   overflow: hidden;
 }
 

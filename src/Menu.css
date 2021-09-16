@@ -4,10 +4,6 @@
   font-size: medium;
 }
 
-.menu.hidden {
-  display: none;
-}
-
 .menu__items {
   display: flex;
   justify-content: center;

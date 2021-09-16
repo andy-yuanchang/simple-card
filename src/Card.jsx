@@ -13,19 +13,30 @@ const PLATFORM_ENUM = {
 
 function Card() {
   const [selectedPlatform, setSelectedPlatform] = useState(PLATFORM_ENUM.All);
+  const [isHideMenu, setIsHideMenu] = useState(false);
+
+  function handleClickButton() {
+    setIsHideMenu(true);
+  }
+
   return (
     <div className="card">
       <header className="card__header">
         card
       </header>
 
-      <div className="card__second-header">
-        <Menu
-          platformList={PLATFORM_ENUM}
-          selectedPlatform={selectedPlatform}
-          onSelectPlatform={setSelectedPlatform}
-        />
-      </div>
+      {
+        !isHideMenu && (
+          <div className="card__second-header">
+            <Menu
+              platformList={PLATFORM_ENUM}
+              selectedPlatform={selectedPlatform}
+              onSelectPlatform={setSelectedPlatform}
+              onClickButton={handleClickButton}
+            />
+          </div>
+        )
+      }
 
       <div className="card__content">
         {
