@@ -1,0 +1,39 @@
+:root {
+  --table-color: rgb(185, 185, 185);
+}
+
+.main {
+  height: 100%;
+}
+
+.main__title {
+  color: var(--table-color);
+  text-transform: uppercase;
+}
+
+.main__scroll-table {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.main__scroll-table table {
+  color: black;
+  width: 100%;
+  border: none;
+}
+
+.main__scroll-table table th{
+  border-bottom: var(--table-color);
+}
+
+.main__scroll-table table .name {
+  font-weight: bolder;
+}
+
+.main__scroll-table table .progress-bar {
+  text-align: right;
+}
+
+.main__scroll-table table .posts {
+  text-align: right;
+}

@@ -1,0 +1,43 @@
+.card {
+  width: 400px;
+  height: 300px;
+}
+
+.card__header {
+  background: rgb(65, 153, 255);
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__header::after {
+  content: "\003F";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.card__second-header {
+  height: 10%;
+}
+
+.card__content {
+  min-height: 60%;
+  max-height: 70%;
+  overflow: hidden;
+}
+
+.card__footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-transform: uppercase;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

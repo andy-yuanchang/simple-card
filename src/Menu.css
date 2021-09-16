@@ -1,0 +1,35 @@
+.menu {
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: medium;
+}
+
+.menu.hidden {
+  display: none;
+}
+
+.menu__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-basis: 85%;
+}
+
+.menu__items span {
+  color: white;
+  display: inline;
+  cursor: pointer;
+}
+
+.menu__items span.selected {
+  color: rgba(0, 0, 0, 0.8);
+  background: white;
+}
+
+.menu__button {
+  flex-basis: 15%;
+  border-left: 1px solid grey;
+  text-align: center;
+  cursor: pointer;
+}
